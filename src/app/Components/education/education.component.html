@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+    <div class="title">
+        <div class="col-md-6">
+        <h1> 
+            Education
+            
+        </h1>
+        <section *ngFor="let education of educationList">
+            <h2> {{education.institute}}</h2>
+            <h3> {{education.course}}</h3>
+            <h4> {{education.duration}}</h4>
+            <h4> {{education.score}}</h4>
+        </section>
+        </div>
+<div class="col-md-6">
+        <h1> 
+            Work Experience
+        </h1>
+        <ul>
+        <li *ngFor="let experience of workExperienceList ">
+            <h2> {{experience.role}}</h2>
+            <h3> {{experience.company}}</h3>
+            <h4> {{experience.duration}}</h4>
+            <ul> 
+                <li *ngFor=" let desc of experience.description">{{desc}}</li>
+            </ul>
+        </li>
+        </ul>
+        </div>
+       
+    </div>
+    
+</div>
+   
+</div>
+

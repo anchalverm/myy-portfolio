@@ -1,0 +1,67 @@
+:host{
+    display: block;
+    color: black;
+    padding:3rem 2rem;
+}
+.container{
+    gap: 2rem;
+    display: grid;
+}
+h1{
+    padding: 1rem 0;
+    letter-spacing: 1px;
+    color: green;
+    outline: 1px solid white ;
+    text-align: center;
+}
+section{
+    margin-top: 2rem;
+}
+section h2{
+    color: green;
+}
+section h3{
+    margin-top: 0.5rem;
+    color: gray;
+}
+section ul{
+    margin-top: 0.5rem;
+    list-style: circle;
+}
+:host.pc section{
+    // width: 600px;
+    position: relative;
+    margin-left: 5rem;
+    // display: grid;
+    // gap: 0 1.5rem;
+    // grid-template-columns: 1fr 5fr;
+    // grid-template-rows: repeat(3,1fr);
+    }
+    :host.pc section h3 span:nth-child(2){
+        color: black;
+    }
+    :host.pc section::before{
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: green;
+        left: -60px;
+        top:5px;
+        border-radius: 50%;
+        z-index: 2;
+    }
+
+    :host.pc section::after{
+        content: '';
+    position: absolute;
+    width: 1px;
+    height: 150%;
+    background-color: gray;
+    left: -50px;
+    top:5%;
+   z-index: 1;
+    }
+    :host.pc section:last-child::after{
+        height: 100%;
+    }

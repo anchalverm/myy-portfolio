@@ -1,0 +1,93 @@
+:host{
+    display: block;
+    color: black;
+    padding:3rem 2rem;
+}
+.container{
+    gap: 2rem;
+    display: grid;
+}
+h1{
+    padding: 1rem 0;
+    letter-spacing: 1px;
+    color: green;
+    outline: 1px solid white ;
+    text-align: center;
+}
+section{
+    margin-top: 2rem;
+}
+section h2{
+    color: green;
+}
+section h4{
+    color: gray;
+}
+.title{
+    display: flex; 
+    justify-content: space-around;
+    @media (max-width:767px) {
+        display: block;
+    }
+}
+:host.pc section{
+width: 600px;
+position: relative;
+// margin-left: 5rem;
+display: grid;
+gap: 0 1.5rem;
+grid-template-columns: 1fr 5fr;
+grid-template-rows: repeat(3,1fr);
+}
+:host.pc section h4:nth-child(4){
+    grid-row: 1/4;
+    margin-top: 0%;
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid gray;
+}
+ul:has(ul){
+    padding: 0%;
+    list-style: none;
+}
+ul li:has(ul){
+ margin-top: 2rem;
+}
+ul li h2{
+    color: green;
+}
+ul li h4{
+    color: gray;
+}
+:host.pc ul li:has(ul){
+    width:max-content;
+    position: relative;
+    // margin-left: 5rem;
+}
+:host.pc ul li:has(ul)::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    left: -60px;
+    top:5px;
+    border-radius: 50%;
+    z-index: 2;
+}
+:host.pc ul li:has(ul)::after{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 130%;
+    background-color: gray;
+    left: -50px;
+    top:5%;
+   z-index: 1;
+
+}
+:host.pc ul li:has(ul):last-child:after{
+    height: 100%;
+}

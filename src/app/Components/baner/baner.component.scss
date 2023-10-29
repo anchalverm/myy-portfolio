@@ -1,0 +1,117 @@
+
+:host{
+    display: grid;
+    background-color: darkgrey;
+    padding: 4rem 2rem 6rem;
+    clip-path: polygon(0% 0% , 100% 0% , 100% 95% , 50% 100% ,0% 95%);
+  }
+  :host.pc{
+    display: grid;
+    background-color:#5e88a780;
+    padding: 4rem 2rem 10rem;
+    clip-path: polygon(0% 0% , 100% 0% , 100% 95% , 50% 100% ,0% 95%);
+  }
+  :host.pc.title{
+    grid-column: 1/2;
+    padding: 0%;
+    margin: auto;
+    font-size: 5rem;
+    font-style: normal;
+    text-decoration: none;
+  }
+  .profile{
+    width:300px;
+    height:300px;
+    // display: flex;
+    // justify-content: center;
+    grid-row: 2/3;
+    margin: 0 auto;
+    position: relative;
+    clip-path: inset(0 round 0 0 25%);
+}
+.profile img{
+    width:100%;
+    height:100%;
+    position: absolute;
+}
+.profile .profile-bg{
+    height: 75%;
+    width:100%;
+    bottom:0%;
+    position: absolute;
+    background-color: #69F0AE;
+    clip-path: inset(0 round 50% 0 0);
+    // border-radius: 50% 0% 0%;
+}
+.name{
+    grid-row: 3/4;
+    padding: 2rem;
+    color: black;
+    font-size: 2rem;
+    margin-top: 3rem;
+    outline: 1px solid white;
+  }
+  .name span:nth-of-type(1) span{
+    font-size: 3rem;
+    color: green;
+  }
+  .name span:nth-of-type(2){
+    display: inline-block;
+    font-size: 4rem;
+    color: green;
+    font-weight: bold;
+    padding: 10px 0;
+    letter-spacing: 8px;
+    // text-shadow: 10px 8px 10px black;
+
+  }
+  .title{
+    font-size: 4rem;
+    padding: 0 0 2rem;
+    text-align: center;
+    font-style: italic;
+    color: green;
+    text-decoration: underline;
+  }
+  // .container{
+  //   display: grid;
+  //   grid-template-columns: 1fr;
+  // }
+  // .pc{
+  //   display: grid;
+  //   background-color: darkgray;
+  //   padding: 4rem 2rem 10rem;
+  //   clip-path: polygon(0% 0% , 100% 0% , 100% 90% , 50% 100% ,0% 90%);
+  // }
+  // .pc.container{
+  //   grid-template-columns: 1fr 1fr;
+  //   grid-template-rows: 1fr 2fr;
+  // }
+  .pc.title{
+    grid-column: 1/2;
+    padding: 0%;
+    margin: auto;
+    font-size: 5rem;
+    font-style: normal;
+    text-decoration: none;
+  }
+  .pc .profile{
+    grid-row: 1/3;
+    grid-column: 2/3;
+    width: 489px;
+    height: 489px;
+    margin-left: 6rem;
+  }
+  .pc .name{
+    grid-row:2/3;
+    width:490px;
+    margin:auto;
+    margin-left: 0;
+    margin-bottom: 0;
+    height: max-content;
+  }
+  .profile_details{
+    display: flex;
+    justify-content: space-between;
+  }
+ 

@@ -1,0 +1,50 @@
+:host{
+    display: block;
+    color: black;
+    padding:3rem 2rem;
+}
+.container{
+    gap: 2rem;
+    display: grid;
+}
+h1{
+    padding: 1rem 0;
+    letter-spacing: 1px;
+    color: green;
+    outline: 1px solid white ;
+    text-align: center;
+}
+section{
+    margin-top: 2rem;
+}
+section h2{
+    color: green;
+}
+section .rating{
+width: 100%;
+height: max-content;
+margin-top: 0.5rem;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+
+section .rating .bar{
+    height: 5px;
+    flex-grow: 1;
+    margin-right: 1rem;
+    background-color: rgba(125,128,139,1);
+}
+section .rating .bar div{
+    height: 100%;
+    background-color: green;
+}
+:host.pc .container{
+    display: grid;
+    gap:2rem 4rem;
+    grid-template-columns: 1fr 1fr;
+}
+:host.pc h1{
+    grid-column: 1/3;
+}
