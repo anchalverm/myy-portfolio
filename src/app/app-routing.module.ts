@@ -4,6 +4,7 @@ import { BanerComponent } from './Components/baner/baner.component';
 import { PersonalInformationComponent } from './Components/personal-information/personal-information.component';
  
 const routes: Routes = [
+  {path:"*",component: BanerComponent}
 ];
 
 @NgModule({
